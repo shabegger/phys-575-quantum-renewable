@@ -1,0 +1,3 @@
+# Unit Commitment
+
+“Day-ahead unit commitment is another important energy system problem that suffers from power forecast errors. Unit commitment requires that operators identify which plants should be started up, running, and prepared to provide power considering operational, technical, economic, and environmental constraints such as thermal line limits, voltage magnitude limits, nodal balancing constraints, and reserve requirements. As a result, unit commitment determines the conditions that will become constraints for the AC OPF calculation in real time. This problem requires the solution of a mixed integer linear programming problem that is not convex and, therefore, hard to solve.” [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)]

@@ -24,10 +24,6 @@ body.-menu-visible .doc-layout .toc-menu .menu-item span {
     color: #FFFFFF;
 }
 
-body.-menu-visible .doc-layout .toc-menu .menu-item a:visited {
-    color: #DDDDDD;
-}
-
 body.-menu-visible .doc-layout .toc-menu .menu-item.-level-1:first-child a {
     color: #EBD5A4;
 }

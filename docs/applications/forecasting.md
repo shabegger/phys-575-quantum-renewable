@@ -1,1 +1,13 @@
 # Forecasting
+
+Forecasting is important to the operation of an electrical grid. Historically, models based on historical trends were used to forecast demand (or the load on the grid) based on season and time of day. These models have been augmented with advanced statistical and machine learning models. However, renewable energy increases the difficulty of the challenge, because day-to-day and minute-to-minute weather affects the availability of wind and solar power, for instance. Other factors, such as generators, solar wind, water generation and load curtailment, further enhance the difficulty, while the rapid evolution of the power system means that past data is a less reliable indicator of future requirements. [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)]
+
+There are many factors that go into forecasting for wind and solar, including weather observations (pressure, temperature, wind speed, etc.), numerical weather prediction models and statistical analyses. Approximate models (fluid dynamics-based physics models forecast based on current conditions, using supercomputers, but also approximate models using machine learning/deep neural networks) are used to transform these inputs into forecasts, because the amount of data and precision to calculate the physics are too great. [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)]
+
+Forecasts are required on multiple scales: minutes (stabilizing grid operations and real-time energy markets), hours (informing prices in day-ahead energy markets) and weeks (to assess grid reliability). Advanced machine learning is being investigated for solar forecasting, but longer time horizons become increasingly inaccurate due the chaotic nature of the systems that determine weather. [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)]
+
+Using quantum computers (both annealers and universal gate-based machines) has been investigated for calculating wind-blade interactions and solving the Navier-Stokes equation for fluid dynamics. [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)]
+
+VQE can be extended to solve nonlinear problems with polynomial scaling, rather than the exponential scaling required by classical computers. Nonlinear partial differential equations are required to calculate atmospheric processes. [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)]
+
+Hybrid quantum-classical methods may also be particularly well-suited to problems that involve a large amount of data. Quantum computers could be used during the training of machine learning models. [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)]
