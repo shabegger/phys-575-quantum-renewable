@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "Study Project 1 - Phys 575 - UW - Winter 2022",
   "scripts": {
-    "build": "docpress b",
-    "serve": "docpress s"
+    "build": "docpress build",
+    "serve": "docpress serve"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,11 @@
     "url": "https://github.com/shabegger/phys-575-quantum-renewable/issues"
   },
   "homepage": "https://github.com/shabegger/phys-575-quantum-renewable#readme",
+  "docpress": {
+    "css": [
+      "docs/customStyles.css"
+    ]
+  },
   "devDependencies": {
     "docpress": "^0.8.2"
   }

@@ -1,0 +1,33 @@
+body.-menu-visible .doc-layout .menu-toggle {
+    background-color: transparent;
+}
+
+body .doc-layout .menu-toggle::before {
+    color: #2B2E63;
+}
+
+body.-menu-visible .doc-layout .menu-toggle::before {
+    color: #EBD5A4;
+}
+
+body .doc-layout .menu-toggle:hover::before,
+body.-menu-visible .doc-layout .menu-toggle:hover::before {
+    color: #565895;
+}
+
+body.-menu-visible .doc-layout .toc-menu {
+    background-color: #2B2E63;
+}
+
+body.-menu-visible .doc-layout .toc-menu .menu-item a,
+body.-menu-visible .doc-layout .toc-menu .menu-item span {
+    color: #FFFFFF;
+}
+
+body.-menu-visible .doc-layout .toc-menu .menu-item a:visited {
+    color: #DDDDDD;
+}
+
+body.-menu-visible .doc-layout .toc-menu .menu-item.-level-1:first-child a {
+    color: #EBD5A4;
+}
