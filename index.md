@@ -25,3 +25,8 @@ renewable forms of energy. However, quantum computing may support this effort in
 another way, yet, as there are a number of promising quantum-based algorithms in
 development that may be able to solve certain optimization problems much more
 quickly than classical computers.
+
+Complexity of power networks is expected to increase, as the number of power plants increases. [[Ajagekar 2019](https://doi.org/10.1016/j.energy.2019.04.186)]
+
+Quantum computing has been identified as a potentially useful tool in quantum chemistry, machine learning, cryptography and optimization. 
+Complexity of power networks is expected to increase, as the number of power plants increases. [[Ajagekar 2019](https://doi.org/10.1016/j.energy.2019.04.186)]
