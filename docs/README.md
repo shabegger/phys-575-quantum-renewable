@@ -9,9 +9,9 @@ Documentation
   * Algorithms
     * [VQE](quantum/algorithms/vqe.md)
     * [QAOA](quantum/algorithms/qaoa.md)
-    * [QUBO](quantum/algorithms/qubo.md)
     * [Grover](quantum/algorithms/grover.md)
     * [HHL](quantum/algorithms/hhl.md)
+    * [QUBO](quantum/algorithms/qubo.md)
 * [Renewable Applications](applications/index.md)
   * [Chemistry](applications/chemistry.md)
     * [Batteries](applications/battery.md)
