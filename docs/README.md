@@ -14,6 +14,7 @@ Documentation
     * [HHL](quantum/algorithms/hhl.md)
 * [Renewable Applications](applications/index.md)
   * [Chemistry](applications/chemistry.md)
+    * [Batteries](applications/battery.md)
   * [Forecasting](applications/forecasting.md)
   * [Planning and Dispatch](applications/planning.md)
     * [Unit Commitment](applications/uc.md)
