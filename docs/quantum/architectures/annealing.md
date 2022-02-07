@@ -8,6 +8,8 @@ Quantum annealers are specifically designed for optimization. D-Wave, a Canadian
 
 At the beginning of the algorithm, the system is put into a state with a uniform probability distribution. After the annealing process, the system is found in the globally optimum state with high probability. These machines are inherently more robust to environmental noise than [quantum circuit model](circuit.md) machines, but there are very few known problems for which quantum annealers are exponentially faster than classical algorithms. [[Ajagekar 2019](https://doi.org/10.1016/j.energy.2019.04.186)]
 
+ The quantum speedup isn’t well-known. Begin with a known state of the system and create an energy landscape that encodes the problem with large penalties for breaking constraints. Allow the system to evolve until it is in its minimum energy state (the optimal solution). Special-purpose quantum annealers (D-Wave) or general-purpose quantum computers can be used. D-Wave annealers are shown to improve on classical methods, including simulated annealing, on several NP-hard graph problems. [[Gianai 2021](https://doi.org/10.1007/s42979-021-00786-3)]
+
 <figure>
   <img src="../../images/annealing.jpg"
        alt="Quantum annealing">
