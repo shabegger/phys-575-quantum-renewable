@@ -1,5 +1,5 @@
 # Harrow Hassidim Lloyd Algorithm
 
-Harrow-Hassidim-Lloyd is an algorithm for extracting information about the solutions to linear systems of equations, requiring only O(logN) time on a system of N equations, as opposed to O(n) for classical algorithms. [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)]
+Harrow-Hassidim-Lloyd is an algorithm for extracting information about the solutions to linear systems of equations, requiring only <math><mi>O</mi><mo>(</mo><mo>log</mo><mi>N</mi><mo>)</mo></math> time on a system of <math><mi>N</mi></math> equations, as opposed to <math><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></math> for classical algorithms. [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)]
 
-The HHL algorithm was developed in 2009 as a method to gain information about the solution, x, of particular classes of linear systems, Ax &eq; B. [HHL](https://quantumcomputing.com/strangeworks/harrow-hassidim-lloyd-hhl-algorithm)
+The HHL algorithm was developed in 2009 as a method to gain information about the solution, <math><mi>x</mi></math>, of particular classes of linear systems, <math><mi>A</mi><mi>x</mi><mo>=</mo><mi>b</mi></math>, where <math><mi>A</mi></math> is an <math><mi>N</mi><mo>&times;</mo><mi>N</mi></math> matrix, and <math><mi>x</mi></math> and <math><mi>b</mi></math> are vectors of size <math><mi>N</mi></math>. [HHL](https://quantumcomputing.com/strangeworks/harrow-hassidim-lloyd-hhl-algorithm)

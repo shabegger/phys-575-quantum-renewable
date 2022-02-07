@@ -25,7 +25,10 @@
   "homepage": "https://github.com/shabegger/phys-575-quantum-renewable#readme",
   "docpress": {
     "css": [
-      "docs/customStyles.css"
+      "docs/styles/custom.css"
+    ],
+    "scripts": [
+      "https://fred-wang.github.io/mathjax.js/mpadded-min.js"
     ]
   },
   "devDependencies": {
