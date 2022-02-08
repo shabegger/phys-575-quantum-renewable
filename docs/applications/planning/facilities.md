@@ -6,10 +6,12 @@ The quadratic assignment problem is an example of a facility location-allocation
 
 Subject to the constraint that the solution gives a one-to-one mapping between locations and plants, the cost function to optimize is given by
 
-<math><mi>C</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><munderover><mo>&sum;</mo><mrow><mi>q</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo>&sum;</mo><mrow><mi>p</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo>&sum;</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo>&sum;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>T</mi><mrow><mi>p</mi><mi>q</mi></mrow></msub><msub><mi>x</mi><mrow><mi>p</mi><mi>i</mi></mrow></msub><msub><mi>x</mi><mrow><mi>q</mi><mi>j</mi></mrow></math>
+<math display="block"><mrow><mi>C</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><munderover><mo>&sum;</mo><mrow><mi>q</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo>&sum;</mo><mrow><mi>p</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo>&sum;</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo>&sum;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>T</mi><mrow><mi>p</mi><mi>q</mi></mrow></msub><msub><mi>x</mi><mrow><mi>p</mi><mi>i</mi></mrow></msub><msub><mi>x</mi><mrow><mi>q</mi><mi>j</mi></mrow></math>
 
 where <math><msub><mi>x</mi><mrow><mi>p</mi><mi>i</mi></mrow></msub></math> is a boolean variable that indicates whether plant <math><mi>p</mi></math> is to be built at location <math><mi>i</mi></math>. [[Ajagekar 2019](https://doi.org/10.1016/j.energy.2019.04.186)]
 
 [Ajagekar 2019](https://doi.org/10.1016/j.energy.2019.04.186) cast this problem into the [Ising model](../../quantum/models/ising.md), the Hamiltonian of which can easily be represented as operations in a [quantum circuit](../../quantum/architectures/circuit.md), and solved a small <math><mi>n</mi><mo>=</mo><mn>4</mn></math> instance on [IBM Q](https://quantum-computing.ibm.com/)'s quantum computer using the [VQE](../../quantum/algorithms/vqe.md) algorithm.
 
 [Ajagekar 2019](https://doi.org/10.1016/j.energy.2019.04.186) additionally mapped this problem onto [QUBO](../../quantum/models/qubo.md) and ran it on a [D-Wave](https://www.dwavesys.com/) annealer for several differently sized instances. They found the D-Wave solver produced nearly optimal results with much better scaling than running a classical optimizer on a single CPU core.
+
+<script>MathJax.typeset();</script>
