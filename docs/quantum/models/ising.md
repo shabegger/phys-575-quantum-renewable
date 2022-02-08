@@ -1,0 +1,13 @@
+# The Heisenberg and Ising Models
+
+The Heisenberg model describes a network of quantum spins in an external magnetic field. The spins are stuck to a lattice (they are immobile) but are free to change orientation. This system is described by the Hamiltonian
+
+<math display="block"><mi>&Hcirc;</mi><mo>=</mo><mrow><mo>-</mo><munder><mo>&sum;</mo><mi>j</mi></munder><munder><mo>&sum;</mo><mrow><mi>i</mi><mo><</mo><mi>j</mi></munder><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi><mo>,</mo><mi>x</mi></mrow></msub><msub><mi>X</mi><mi>i</mi></msub><msub><mi>X</mi><mi>j</mi></msub><mo>+</mo><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi><mo>,</mo><mi>y</mi></mrow></msub><msub><mi>Y</mi><mi>i</mi></msub><msub><mi>Y</mi><mi>j</mi></msub><mo>+</mo><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi><mo>,</mo><mi>z</mi></mrow></msub><msub><mi>Z</mi><mi>i</mi></msub><msub><mi>Z</mi><mi>j</mi></msub></mrow><mo>-</mo><mrow><munder><mo>&sum;</mo><mi>j</mi></munder><msub><mi>B</mi><mi>j</mi></msub><msub><mi>Z</mi><mi>j</mi></msub></mrow></math>
+
+with coupling constants <math><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi><mo>,</mo><mi>&sigma;</mi></mrow></msub></math> between spins and strength of the magnetic field at each spin <math><msub><mi>B</mi><mi>j</mi></msub></math>. <math><msub><mi>X</mi><mi>j</mi></msub></math>, <math><msub><mi>Y</mi><mi>j</mi></msub></math> and <math><msub><mi>Z</mi><mi>j</mi></msub></math> represent the Pauli spin operators acting on spin <math><mi>j</mi></math>.
+
+The Ising model is similar and may be thought of as the limiting case where the <math><mi>X</mi></math> and <math><mi>Y</mi></math> couplings vanish, so the Hamiltonian is
+
+<math display="block"><mi>&Hcirc;</mi><mo>=</mo><mrow><mo>-</mo><munder><mo>&sum;</mo><mi>j</mi></munder><munder><mo>&sum;</mo><mrow><mi>i</mi><mo><</mo><mi>j</mi></munder><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>Z</mi><mi>i</mi></msub><msub><mi>Z</mi><mi>j</mi></msub></mrow><mo>-</mo><mrow><munder><mo>&sum;</mo><mi>j</mi></munder><msub><mi>B</mi><mi>j</mi></msub><msub><mi>Z</mi><mi>j</mi></msub></mrow></math>
+
+Systems described by these models can be represented by either the [circuit](../architectures/circuit.md) or [annealing](../architectures/annealing.md) quantum computing paradigms. While they were devised to describe physical systems, a number of optimization problems may be mapped onto them, so that a cost function is mapped onto a corresponding Hamiltonian. In the circuit model, the Hamiltonian may be encoded as a circuit used to calculate the expected value of the cost function as the inner loop of an optimization, as in the [VQE](../algorithms/vqe.md) algorithm. Ising models may also be given as input to the D-Wave annealer.

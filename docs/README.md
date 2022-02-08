@@ -7,6 +7,7 @@ Documentation
     * [Circuit Model](quantum/architectures/circuit.md)
     * [Annealing](quantum/architectures/annealing.md)
   * Models
+    * [Jordan-Wigner](quantum/models/jw.md)
     * [Heisenberg and Ising](quantum/models/ising.md)
     * [QUBO](quantum/models/qubo.md)
   * Algorithms

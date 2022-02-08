@@ -20,6 +20,9 @@ Computing for Energy Storage. Joule, 2(5), 810–813.](
 79.](
   https://doi.org/10.22331/q-2018-08-06-79
 )
-* [Harrow Hassidim Lloyd (HHL) Algorithm](
+* [Cjgronlund. (n.d.). Jordan-Wigner Representation - Azure Quantum. Azure Quantum | Microsoft Docs. Retrieved February 8, 2022, from https://docs.microsoft.com/en-us/azure/quantum/user-guide/libraries/chemistry/concepts/jordan-wigner ](
+  https://docs.microsoft.com/en-us/azure/quantum/user-guide/libraries/chemistry/concepts/jordan-wigner
+)
+* [Harrow Hassidim Lloyd (HHL) Algorithm. Quantum Computing. (n.d.). Retrieved February 5, 2022, from https://quantumcomputing.com/strangeworks/harrow-hassidim-lloyd-hhl-algorithm ](
   https://quantumcomputing.com/strangeworks/harrow-hassidim-lloyd-hhl-algorithm
 )
