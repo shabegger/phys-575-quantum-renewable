@@ -12,6 +12,39 @@ where <math><msub><mi>x</mi><mrow><mi>p</mi><mi>i</mi></mrow></msub></math> is a
 
 [Ajagekar 2019](https://doi.org/10.1016/j.energy.2019.04.186) cast this problem into the [Ising model](../../quantum/models/ising.md), the Hamiltonian of which can easily be represented as operations in a [quantum circuit](../../quantum/architectures/circuit.md), and solved a small <math><mi>n</mi><mo>=</mo><mn>4</mn></math> instance on [IBM Q](https://quantum-computing.ibm.com/)'s quantum computer using the [VQE](../../quantum/algorithms/vqe.md) algorithm.
 
+Since the constraint of a one-to-one map from power plant to location can't be made explicitly in a quantum algorithm, one instead encodes that constraint as a large cost, <math><mi>A</mi></math>, when the constraint is not met. The cost function can then be updated as
+
+<math display="block"><mrow><mi>C</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><munderover><mo>&sum;</mo><mrow><mi>q</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo>&sum;</mo><mrow><mi>p</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo>&sum;</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo>&sum;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>T</mi><mrow><mi>p</mi><mi>q</mi></mrow></msub><msub><mi>x</mi><mrow><mi>p</mi><mi>i</mi></mrow></msub><msub><mi>x</mi><mrow><mi>q</mi><mi>j</mi></mrow></msub><mo>+</mo><mi>A</mi><munderover><mo>&sum;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo>(</mo><mn>1</mn><mo>-</mo><munderover><mo>&sum;</mo><mrow><mi>p</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>x</mi><mrow><mi>p</mi><mi>i</mi></mrow></msub><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><mi>A</mi><munderover><mo>&sum;</mo><mrow><mi>p</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo>(</mo><mn>1</mn><mo>-</mo><munderover><mo>&sum;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>x</mi><mrow><mi>p</mi><mi>i</mi></mrow></msub><mo>)</mo></mrow><mn>2</mn></msup></math>
+
+To encode the binary variables, <math><msub><mi>x</mi><mrow><mi>p</mi><mi>i</mi></mrow></msub></math>, onto measurements in the computational basis, <math><mi>Z</mi></math>, which give values <math><mn>1</mn></math> and <math><mn>-1</mn></math>, we set
+
+<math display="block"><msub><mi>x</mi><mrow><mi>p</mi><mi>i</mi></mrow></msub><mo>=</mo><mfrac><mrow><mn>1</mn><mo>-</mo><msub><mi>Z</mi><mrow><mi>p</mi><mi>i</mi></mrow></msub></mrow><mn>2</mn></mfrac></math>
+
+This [Google Colab](https://colab.research.google.com/drive/1imY5xEJ9VOmJxiLQTY2vll793MXWxxy8?usp=sharing) notebook illustrates how this problem can be mapped onto a quantum circuit and solved using VQE. The notebook contains the complete code for a random <math><mi>n</mi><mo>=</mo><mn>3</mn></math> problem using Google's open source quantum framework, [Cirq](https://quantumai.google/cirq), and [Tensorflow](https://www.tensorflow.org/) and [Tensorflow Quantum](https://www.tensorflow.org/quantum) for the classical outer optimization loop, but the Hamiltonian can be described with the following code
+
+```python
+# Large penalty for breaking constraints
+A = 50
+
+# Build up the Hamiltonian for our Ising model
+h = []
+for q in range(N):
+  for p in range(N):
+    for j in range(N):
+      for i in range(N):
+        h.append(costs[i][j] * transport[p][q] * (1 - cirq.Z(cirq.GridQubit(p, i))) / 2 * (1 - cirq.Z(cirq.GridQubit(q, j))) / 2)
+for i in range(N):
+  h_i = [1]
+  for p in range(N):
+    h_i.append((cirq.Z(cirq.GridQubit(p, i)) - 1) / 2)
+  h.append(A * sum(h_i) * sum(h_i))
+for p in range(N):
+  h_p = [1]
+  for i in range(N):
+    h_p.append((cirq.Z(cirq.GridQubit(p, i)) - 1) / 2)
+  h.append(A * sum(h_p) * sum(h_p))
+```
+
 [Ajagekar 2019](https://doi.org/10.1016/j.energy.2019.04.186) additionally mapped this problem onto [QUBO](../../quantum/models/qubo.md) and ran it on a [D-Wave](https://www.dwavesys.com/) annealer for several differently sized instances. They found the D-Wave solver produced nearly optimal results with much better scaling than running a classical optimizer on a single CPU core.
 
 <script>MathJax.typeset();</script>
