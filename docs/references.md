@@ -26,3 +26,5 @@ Computing for Energy Storage. Joule, 2(5), 810–813.](
 * [Harrow Hassidim Lloyd (HHL) Algorithm. Quantum Computing. (n.d.). Retrieved February 5, 2022, from https://quantumcomputing.com/strangeworks/harrow-hassidim-lloyd-hhl-algorithm ](
   https://quantumcomputing.com/strangeworks/harrow-hassidim-lloyd-hhl-algorithm
 )
+
+<script>MathJax.typeset();</script>

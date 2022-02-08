@@ -24,5 +24,4 @@ Documentation
     * [Unit Commitment](applications/planning/uc.md)
     * [HENS](applications/planning/hens.md)
   * [Stability and Reliability](applications/stability.md)
-* [Conclusions](conclusion.md)
 * [References](references.md)

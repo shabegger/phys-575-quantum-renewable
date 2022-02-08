@@ -1,21 +1,13 @@
 # Overview of Quantum Computing
 
-It’s important to recognize that quantum computers can not solve every problem
-exponentially faster than classical computers
-[[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)]. Many problems exist
-in the same complexity class for quantum computers as they do for classical
-computers, and given the expense of quantum hardware and typically
-longer-running elementary operations, it is important to judiciously select the
-problems on which quantum computing is brought to bear.
+While classical computers are built on the generic concept of bits, units of information that can take on the values <math><mn>0</mn></math> or <math><mn>1</mn></math>, quantum computers operate on qubits, which can exist in the eigenstates <math><mo>|</mo><mn>0</mn><mo>&rang;</mo></math> or <math><mo>|</mo><mn>1</mn><mo>&rang;</mo></math>, or any superposition thereof. Moreover, when qubits are allowed to interact with one another, these states can be entangled.
 
-Quantum complexity theory is not yet developed enough to know for certain whether any exponential quantum speedups exist [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)]. (Note: Is that really true? Or is it just that we don’t know for sure that P != NP) For instance, it was once thought that a recommendation algorithm had a large quantum speedup over classical, but in 2018 an undergraduate student discovered a classical algorithm that eliminates the quantum advantage [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)].
+To understand the potential benefit of quantum computing, we need some grounding in computational complexity theory. The computational complexity of a problem describes the scaling of the number of computational steps required to solve the problem as a function of the problem size, <math><mi>N</mi></math>. Problems in the complexity class P may be solved by a classical computer in a number of steps given by a polynomial function of <math><mi>N</mi></math>. Problems in the NP-hard complexity class may only have polynomial-time solutions if the complexity class NP is equivalent to P, which computer scientists do not believe to be the case.
 
-Even when quantum algorithms have been shown to beat their classical counterparts, it may often be the case that better classical algorithms may eventually be found. [[Ajagekar 2019](https://doi.org/10.1016/j.energy.2019.04.186)]
+Quantum computing may only gain an advantage over classical computing for algorithms that can make use of the properties of superpostion, entanglement and interference. Quantum computers can not solve every problem exponentially faster than classical computers [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)]. Many problems exist in the same complexity class for quantum computers as they do for classical computers, and given the expense of quantum hardware and typically longer-running elementary operations, it is important to judiciously select the problems on which to use quantum computing resources.
 
-Shor’s algorithm is a method of factoring large numbers and is part of a family of algorithms for solving “hidden subgroup” problems. It would be capable of breaking some modern cryptographic schemes, like RSA. [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)]
+Furthermore, even when quantum algorithms have been shown to beat their classical counterparts, it may be the case that better classical algorithms may eventually be found [[Ajagekar 2019](https://doi.org/10.1016/j.energy.2019.04.186)]. For instance, it was once thought that a recommendation algorithm had a large quantum speedup over classical, but in 2018 an undergraduate student discovered a classical algorithm that eliminates the quantum advantage [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)].
 
-Specifying a classical state of N bits requires N classical bits, but specifying the quantum state of N qubits requires 2^N numbers. [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)]
+Quantum computing research has focused on two main general architectures, the [quantum circuit](architectures/circuit.md) (of which there are many physical manifestations) and the [annealer](architectures/annealing.md) architectures. There are also a variety of models and algorithms that may be useful in the application of quantum computing to problems in renewable energy.
 
-Polynomial speedup vs. exponential speedup
-
-While classical computer information is entirely binary, quantum information can take advantage of superposition, entanglement and interference. Quantum computing is only likely to have an advantage over classical computing for algorithms that can make use of these properties. [[Giani 2021](https://doi.org/10.1007/s42979-021-00786-3)]
+<script>MathJax.typeset();</script>
