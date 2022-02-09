@@ -20,7 +20,7 @@ To encode the binary variables, <math><msub><mi>x</mi><mrow><mi>p</mi><mi>i</mi>
 
 <math display="block"><msub><mi>x</mi><mrow><mi>p</mi><mi>i</mi></mrow></msub><mo>=</mo><mfrac><mrow><mn>1</mn><mo>-</mo><msub><mi>Z</mi><mrow><mi>p</mi><mi>i</mi></mrow></msub></mrow><mn>2</mn></mfrac></math>
 
-This [Google Colab](https://colab.research.google.com/drive/1imY5xEJ9VOmJxiLQTY2vll793MXWxxy8?usp=sharing) notebook illustrates how this problem can be mapped onto a quantum circuit and solved using VQE. The notebook contains the complete code for a random <math><mi>n</mi><mo>=</mo><mn>3</mn></math> problem using Google's open source quantum framework, [Cirq](https://quantumai.google/cirq), and [Tensorflow](https://www.tensorflow.org/) and [Tensorflow Quantum](https://www.tensorflow.org/quantum) for the classical outer optimization loop, but the Hamiltonian can be described with the following code
+This [Google Colab](https://colab.research.google.com/drive/1imY5xEJ9VOmJxiLQTY2vll793MXWxxy8?usp=sharing) notebook illustrates how this problem can be mapped onto a quantum circuit and solved using VQE. The notebook contains the complete code for a random <math><mi>n</mi><mo>=</mo><mn>3</mn></math> problem using Google's open source quantum framework, [Cirq](https://quantumai.google/cirq). In this example, the resulting quantum circuit is run in the Cirq simulator, but it can also be run on real quantum hardware. [Tensorflow](https://www.tensorflow.org/) and [Tensorflow Quantum](https://www.tensorflow.org/quantum) are used for the classical outer optimization loop. The Hamiltonian can be described with the following code
 
 ```python
 # Large penalty for breaking constraints
